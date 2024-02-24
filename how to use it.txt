@@ -1,0 +1,96 @@
+How to use it:
+1. To get started, include the main JavaScript jquery.loadMore.min.js after jQuery.
+
+1
+<script src="jquery.min.js"></script>
+2
+<script src="jquery.loadMore.min.js"></script>
+2. Automatically loads more content as you scroll down the page.
+
+01
+$('#box').loadMore({
+02
+  loadType:'auto',
+03
+  url:"data.json",
+04
+  dataType:'json',
+05
+  data: {},
+06
+  type:'get',
+07
+  success:function (res) {
+08
+    // a function to render data
+09
+  }
+10
+  error:function () {},
+11
+  callback:function () {
+12
+    // execute a callback when scrolled down to the bottom
+13
+    // ideal for loading more data when the AJAX is disabled
+14
+  }
+15
+});
+3. Manually loads more content as you click/tap the Load More button.
+
+01
+$('#box').loadMore({
+02
+  loadType:'click',
+03
+  url:"data.json",
+04
+  dataType:'json',
+05
+  data: {},
+06
+  type:'get',
+07
+  success:function (res) {
+08
+    // a function to render data
+09
+  }
+10
+  error:function () {},
+11
+  callback:function () {
+12
+    // execute a callback when scrolled down to the bottom
+13
+    // ideal for loading more data when the AJAX is disabled
+14
+  }
+15
+});
+4. Enable/disable asynchronous loading. Default: true.
+
+1
+$('#box').loadMore({
+2
+  async:false
+3
+});
+5. Determine the scroll offset to trigger the infinite scroll. Default: 100px.
+
+1
+$('#box').loadMore({
+2
+  scrollBottom: 200
+3
+});
+6. Determine the position where you want to place the Load More button.
+
+view source
+1
+$('#box').loadMore({
+2
+  conLocation:'body'
+3
+});
