@@ -96,4 +96,4 @@ $('#box').loadMore({
 });
 
 
-url this project link:
+url this project link: https://www.jqueryscript.net/loading/infinite-scroll-loadmore.html
